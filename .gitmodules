@@ -4,3 +4,9 @@
 [submodule "modules/vim-javascript"]
 	path = modules/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "modules/solarized"]
+	path = modules/solarized
+	url = https://github.com/altercation/solarized.git
+[submodule "modules/vim-pathogen"]
+	path = modules/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git

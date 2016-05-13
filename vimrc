@@ -1,10 +1,26 @@
-color monokai
+set nocompatible
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+syntax enable
+color default
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
+execute togglebg#map("<F5>")
+
+if has('mouse')
+    set mouse=a
+endif
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
-syntax on
 set number
 set smartindent
+set hlsearch
 set autowrite
 set autoread
 nmap j gj
