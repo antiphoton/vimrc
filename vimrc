@@ -4,25 +4,56 @@ if has('gui_running')
 else
     set background=dark
 endif
-syntax enable
-color default
-set t_Co=256
-let g:solarized_termcolors=256
+if has("unix")
+    if has("x11") || $TERM=="xterm-256color"
+        set t_Co=256
+        let g:solarized_termcolors=256
+        let g:solarized_bold=1
+        let g:solarized_underline=1
+        let g:solarized_italic=1
+        let g:solarized_visibility="low"
+    endif 
+endif
 colorscheme solarized
-execute togglebg#map("<F5>")
+syntax enable
 
 if has('mouse')
     set mouse=a
 endif
-
+"indent
 set expandtab
 set tabstop=4
 set shiftwidth=4
-set number
 set smartindent
+filetype indent on
+
+"appearance
+
+set number
+set ruler
+set scrolloff=3
+set cursorline
+
+"search
+set ignorecase
+set smartcase
+set incsearch
 set hlsearch
+
+"bar
+set wildmenu
+set wildignore=*~
+set cmdheight=2
+
+"file
+set ff=unix
+set ffs=unix
 set autowrite
 set autoread
+
+set list
+set history=500
+
 nmap j gj
 nmap k gk
 nmap <LEFT> <C-W>h
@@ -51,4 +82,5 @@ autocmd FileType javascript nnoremap <F5> :!node % <CR>
 autocmd FileType python nnoremap <F5> :!python % <CR>
 autocmd FileType sh nnoremap <F5> :!bash % <CR>
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
 
