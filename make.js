@@ -29,4 +29,6 @@ cp('modules/solarized/vim-colors-solarized/doc/solarized.txt','build/.vim/doc/so
 cp('modules/solarized/vim-colors-solarized/doc/tags','build/.vim/doc/tags');
 cp('modules/vim-javascript/syntax/javascript.vim','build/.vim/syntax/javascript.vim');
 cp('modules/vim-javascript/indent/javascript.vim','build/.vim/indent/javascript.vim');
+cp('modules/vim-pug/syntax/pug.vim','build/.vim/syntax/pug.vim');
+cp('modules/vim-pug/indent/pug.vim','build/.vim/indent/pug.vim');
 
